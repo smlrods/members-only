@@ -2,7 +2,7 @@ const User = require('../models/user');
 
 // GET Request to creating a User.
 exports.user_create_get = async (req, res, next) => {
-  res.render('sign-up');
+  res.render('signup');
 }
 
 // POST Request to creating a User.
