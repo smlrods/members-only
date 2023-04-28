@@ -62,4 +62,7 @@ router.get('/log-in', login_controller.user_read_get);
 // POST request for reading a User
 router.post('/log-in', login_controller.user_read_post);
 
+// POST request for log out
+router.post('/log-out', login_controller.user_logout);
+
 module.exports = router;
