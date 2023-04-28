@@ -2,8 +2,8 @@ const express = require("express");
 const router = express.Router();
 
 // Require controller modules
-const signup_controller = require('../models/signupController');
-const login_controller = require('../models/loginController');
+const signup_controller = require('../controllers/signupController');
+const login_controller = require('../controllers/loginController');
 
 // SIGNUP ROUTES //
 
