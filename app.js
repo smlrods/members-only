@@ -6,7 +6,7 @@ const logger = require('morgan');
 const passport = require('passport');
 const session = require('express-session');
 
-const indexRouter = require('./routes/index');
+const homeRouter = require('./routes/home');
 const usersRouter = require('./routes/users');
 const authenticationRouter = require('./routes/authentication');
 
@@ -41,6 +41,7 @@ app.use(session({
 }));
 app.use(passport.authenticate('session'));
 
+app.use('/', homeRouter)
 app.use('/', authenticationRouter);
 app.use('/users', usersRouter);
 

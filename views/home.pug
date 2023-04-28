@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 Home
+
+  if (user)
+    h2= user.username
+
+    form(action='/log-out', method='post')
+      button(type='submit') Log out
+
+    a(href='create-message') Create a new message
+  else
+    ul
+      li
+        a(href='log-in') Log in
+      li
+        a(href='sign-up') Sign up
