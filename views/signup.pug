@@ -5,12 +5,12 @@ block content
   form(action='/sign-up', method='post')
     section
       label(for='first_name') First Name
-      input(id='first_name', name='first_name', type='text', autocomplete='first_name', required)
+      input(id='first_name', value=(undefined===user ? '' : user.first_name), name='first_name', type='text', autocomplete='first_name', required)
       label(for='last_name') Last Name
-      input(id='last_name', name='last_name', type='text', autocomplete='last_name', required)
+      input(id='last_name', value=(undefined===user ? '' : user.last_name), name='last_name', type='text', autocomplete='last_name', required)
     section
       label(for='username') Username
-      input(id='username', name='username', type='text', autocomplete='username', required)
+      input(id='username', value=(undefined===user ? '' : user.username), name='username', type='text', autocomplete='username', required)
     section
       label(for='password') Password
       input(id='password', name='password', type='password', autocomplete='new-password', required)
