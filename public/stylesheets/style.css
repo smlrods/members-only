@@ -99,6 +99,17 @@ nav .logout {
   flex-direction: column;
   gap: 20px;
   width: 100%;
+  position: relative;
+}
+
+#home .messages .message.notuser-message::after {
+  content: "";
+  border: 20px solid transparent;
+  position: absolute;
+  border-right-color: black;
+  border-left: 0;
+  left: -20px; top: 50%;
+  margin-top: -20px;
 }
 
 #home .messages .message {
@@ -108,11 +119,23 @@ nav .logout {
   grid-template-columns: 150px 1fr;
   width: 100%;
   position: relative;
+  width: 950px;
+}
+
+#home .messages .message.user-message::after {
+  content: "";
+  border: 20px solid transparent;
+  position: absolute;
+  border-left-color: black;
+  border-right: 0;
+ 
+  /* (C3-2) POSITION AT RIGHT */
+  right: -20px; top: 50%;
+  margin-top: -20px;
 }
 
 #home .messages .message.user-message {
   align-self: flex-end;
-  width: 950px;
 }
 
 

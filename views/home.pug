@@ -6,7 +6,7 @@ block content
 
     div.messages
       for message in messages
-        div.message(class=( user && user.id == message.user._id ? 'user-message' : ''))
+        div.message(class=( user && user.id == message.user._id ? 'user-message' : 'notuser-message'))
           div.image
             img(src='https://i.pinimg.com/736x/f8/84/7b/f8847b5a92b0e321d6df26ebaee9b39c.jpg')
           div.info
