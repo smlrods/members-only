@@ -4,12 +4,15 @@ block content
   div#form
     h1 Join the club
 
-    form(action='', method='post')
-      div
-        label(for='passcode') Passcode
-        input(id='passcode', name='passcode', type='password', required)
-      button(type='submit') Join
-    if errors
-      ul
-        for error in errors
-          li!= error.msg
+    if (user && user.membership_status)
+      p You're already a member.
+    else
+      form(action='', method='post')
+        div
+          label(for='passcode') Passcode
+          input(id='passcode', name='passcode', type='password', required)
+        button(type='submit') Join
+      if errors
+        ul
+          for error in errors
+            li!= error.msg
