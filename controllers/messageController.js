@@ -5,7 +5,7 @@ const asyncHandler = require('express-async-handler');
 // GET Request to create a message
 exports.message_create_get = (req, res, next) => {
   if (req.user) {
-    res.render('message');
+    res.render('message', { user: req.user });
   } else {
     res.redirect('/home');
   }

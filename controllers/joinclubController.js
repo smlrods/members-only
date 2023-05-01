@@ -7,7 +7,7 @@ const memberPasscode = process.env.MEMBER_PASSCODE;
 
 exports.joinclub_get = (req, res, next) => {
   if (req.user) {
-    res.render('joinclub');
+    res.render('joinclub', { user: req.user });
   } else {
     res.redirect('/home');
   }
