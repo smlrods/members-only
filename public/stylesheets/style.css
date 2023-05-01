@@ -152,27 +152,32 @@ nav .logout {
 /* FORMS */
 
 #create-message,
+#signup,
 #login,
 #joinclub {
   max-width: 1000px;
 }
 
 #create-message h1,
+#signup h1,
 #login h1,
 #joinclub h1 {
   text-align: center;
 }
 
 #create-message form,
+#signup form,
 #login form,
 #joinclub form {
   padding: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 #create-message form button,
+#signup form button,
 #login form button,
 #joinclub form button {
   padding: 10px 20px;
@@ -180,6 +185,7 @@ nav .logout {
 }
 
 #create-message label,
+#signup label,
 #login label,
 #joinclub label {
   display: block;
@@ -189,6 +195,7 @@ nav .logout {
 }
 
 #create-message input,
+#signup input,
 #login input,
 #joinclub input,
 #create-message textarea {
@@ -196,5 +203,6 @@ nav .logout {
   display: block;
   border-radius: 0px;
   width: 100%;
+  min-width: 400px;
   padding: 10px;
 }
