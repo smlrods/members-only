@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Join the club
+
+  form(action='', method='post')
+    div
+      p
+        label(for='passcode') Passcode
+      input(id='passcode', name='passcode', type='password', required)
+    p
+      button(type='submit') Join
+  if errors
+    ul
+      for error in errors
+        li!= error.msg

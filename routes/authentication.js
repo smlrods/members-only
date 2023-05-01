@@ -9,6 +9,7 @@ const User = require('../models/user');
 // Require controller modules
 const signup_controller = require('../controllers/signupController');
 const login_controller = require('../controllers/loginController');
+const joinclub_controller = require('../controllers/joinclubController');
 
 // Passport
 passport.use(
@@ -64,5 +65,11 @@ router.post('/log-in', login_controller.user_read_post);
 
 // POST request for log out
 router.post('/log-out', login_controller.user_logout);
+
+// GET join club page
+router.get('/join-the-club', joinclub_controller.joinclub_get);
+
+// POSt join club page
+router.post('/join-the-club', joinclub_controller.joinclub_post);
 
 module.exports = router;
