@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1 Create a new message
+
+  form(action='', method='post')
+    section
+      p
+        label(for='title') Title
+      input(id='title', name='title', type='text', value=(undefined===message ? '' : message.title))
+    section
+      p
+        label(for='content') Content
+      textarea(id='content', name='content', rows='4', cols='50', value=(undefined===message ? '' : message.content))
+    button(type='submit') Create
