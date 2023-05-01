@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 
 /* GET home. */
 router.get('/home', async (req, res, next) => {
-  const messages = await Message.find().populate('user', 'username').exec();
+  const messages = await Message.find().populate('user', 'username _id').exec();
   res.render('home', {
     user: req.user,
     messages: messages
