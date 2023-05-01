@@ -1,12 +1,13 @@
 extends layout
 
 block content
-  h1 Log in
-  form(action='', method='post')
-    section
-      label(for='username') Username
-      input(type='text', id='username', name='username', value=(undefined===user ? '' : user.username, required))
-    section
-      label(for='password') Password
-      input(type='password', id='password', name='password', required)
-    button(type='submit') Log in
+  #login
+    h1 Log in
+    form(action='', method='post')
+      section
+        label(for='username') Username
+        input(type='text', id='username', name='username', value=(undefined===user ? '' : user.username, required))
+      section
+        label(for='password') Password
+        input(type='password', id='password', name='password', required)
+      button(type='submit') Log in

@@ -152,16 +152,19 @@ nav .logout {
 /* FORMS */
 
 #create-message,
+#login,
 #joinclub {
   max-width: 1000px;
 }
 
 #create-message h1,
+#login h1,
 #joinclub h1 {
   text-align: center;
 }
 
 #create-message form,
+#login form,
 #joinclub form {
   padding: 20px 0;
   display: flex;
@@ -170,12 +173,14 @@ nav .logout {
 }
 
 #create-message form button,
+#login form button,
 #joinclub form button {
   padding: 10px 20px;
   width: 100%;
 }
 
-#create-message,
+#create-message label,
+#login label,
 #joinclub label {
   display: block;
   margin-bottom: 5px;
@@ -184,6 +189,7 @@ nav .logout {
 }
 
 #create-message input,
+#login input,
 #joinclub input,
 #create-message textarea {
   border: 1px solid #000;
