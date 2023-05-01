@@ -4,12 +4,15 @@ block content
   div#form
     h1 Become Admin
 
-    form(action='', method='post')
-      section
-        label(for='passcode') Passcode
-        input(id='passcode', name='passcode', type='password', required)
-      button(type='submit') Become
-    if errors
-      ul
-        for error in errors
-          li!= error.msg
+    if (user && user.admin)
+      p You're already a admin.
+    else
+      form(action='', method='post')
+        section
+          label(for='passcode') Passcode
+          input(id='passcode', name='passcode', type='password', required)
+        button(type='submit') Become
+      if errors
+        ul
+          for error in errors
+            li!= error.msg

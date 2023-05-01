@@ -8,7 +8,7 @@ const adminPasscode = process.env.ADMIN_PASSCODE;
 
 exports.admin_get = (req, res, next) => {
   if (req.user) {
-    res.render('admin');
+    res.render('admin', { user: req.user });
   } else {
     res.redirect('/home');
   }
