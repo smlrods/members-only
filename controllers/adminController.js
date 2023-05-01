@@ -3,6 +3,9 @@ const Message = require('../models/message');
 const { body, validationResult } = require('express-validator');
 const asyncHandler = require('express-async-handler');
 
+require('dotenv').config();
+const adminPasscode = process.env.ADMIN_PASSCODE;
+
 exports.admin_get = (req, res, next) => {
   if (req.user) {
     res.render('admin');
@@ -16,7 +19,7 @@ exports.admin_post = [
     .trim()
     .isLength({min: 1})
     .withMessage('Passcode must be specified')
-    .equals('admin321')
+    .equals(adminPasscode)
     .withMessage('Passcode Incorrect')
     .escape(),
   asyncHandler(async (req, res, next) => {
