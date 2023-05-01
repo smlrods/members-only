@@ -7,20 +7,20 @@ html
     nav
       div
         h2 
-          a(href='home', id='logo') Logo
+          a(href='/home', id='logo') Logo
       div(class='links')
         if (user)
             p Welcome back, @!{user.username}.
 
-            a(href='create-message') Create a new message
-            a(href='join-the-club') Join the club
+            a(href='/create-message') Create a new message
+            a(href='/join-the-club') Join the club
 
             form(action='/log-out', method='post')
               button(type='submit', class='logout') Log out
 
         else
-          a(href='log-in') Log in
-          a(href='sign-up') Sign up
+          a(href='/log-in') Log in
+          a(href='/sign-up') Sign up
 
     div#container
       block content
