@@ -26,3 +26,7 @@ block content
         p By: @!{message.user.username} - !{message.timestamp.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
       else
         p By: Only members can see this.
+      if (user && user.admin)
+        form(action='delete-message', method='post')
+          input(type='hidden', name='messageid', value=(message._id))
+          button(type='submit') Delete

@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const Message = require('../models/message');
 const { body, validationResult } = require('express-validator');
 const asyncHandler = require('express-async-handler');
 
@@ -37,3 +38,10 @@ exports.admin_post = [
     }
   })
 ];
+
+exports.admin_delete_message = async (req, res, next) => {
+  if (req.user && req.user.admin) {
+    await Message.findByIdAndDelete(req.body.messageid);
+  }
+  res.redirect('/home');
+}

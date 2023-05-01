@@ -79,4 +79,7 @@ router.get('/admin', admin_controller.admin_get);
 // POST admin page
 router.post('/admin', admin_controller.admin_post);
 
+// Post admin delete message
+router.post('/delete-message', admin_controller.admin_delete_message);
+
 module.exports = router;
