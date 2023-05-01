@@ -119,7 +119,6 @@ nav .logout {
   grid-template-columns: 150px 1fr;
   width: 100%;
   position: relative;
-  width: 950px;
 }
 
 #home .messages .message.user-message::after {
