@@ -1,16 +1,15 @@
 extends layout
 
 block content
-  h1 Join the club
+  div#joinclub
+    h1 Join the club
 
-  form(action='', method='post')
-    div
-      p
+    form(action='', method='post')
+      div
         label(for='passcode') Passcode
-      input(id='passcode', name='passcode', type='password', required)
-    p
+        input(id='passcode', name='passcode', type='password', required)
       button(type='submit') Join
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+    if errors
+      ul
+        for error in errors
+          li!= error.msg
