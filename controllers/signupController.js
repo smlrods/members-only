@@ -5,7 +5,11 @@ const asyncHandler = require('express-async-handler');
 
 // GET Request to creating a User.
 exports.user_create_get = asyncHandler(async (req, res, next) => {
-  res.render('signup');
+  if (req.user) {
+    res.redirect('/home');
+  } else {
+    res.render('signup');
+  }
 });
 
 // POST Request to creating a User.

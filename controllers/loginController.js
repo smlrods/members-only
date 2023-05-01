@@ -3,7 +3,11 @@ const passport = require('passport');
 
 // GET Request to reading a User.
 exports.user_read_get = async (req, res, next) => {
-  res.render('login');
+  if (req.user) {
+    res.redirect('/home');
+  } else {
+    res.render('login');
+  }
 }
 
 // POST Request to reading a User.
