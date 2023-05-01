@@ -1,16 +1,15 @@
 extends layout
 
 block content
-  h1 Become Admin
+  div#form
+    h1 Become Admin
 
-  form(action='', method='post')
-    div
-      p
+    form(action='', method='post')
+      section
         label(for='passcode') Passcode
-      input(id='passcode', name='passcode', type='password', required)
-    p
+        input(id='passcode', name='passcode', type='password', required)
       button(type='submit') Become
-  if errors
-    ul
-      for error in errors
-        li!= error.msg
+    if errors
+      ul
+        for error in errors
+          li!= error.msg
