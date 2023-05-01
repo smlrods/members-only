@@ -17,7 +17,12 @@ block content
         a(href='log-in') Log in
       li
         a(href='sign-up') Sign up
+
   for message in messages
     div.message
       h3= message.title
       p!= message.content
+      if (user && user.membership_status)
+        p By: @!{message.user.username} - !{message.timestamp.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' })}
+      else
+        p By: Only members can see this.
