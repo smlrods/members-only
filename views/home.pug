@@ -16,3 +16,7 @@ block content
         a(href='log-in') Log in
       li
         a(href='sign-up') Sign up
+  for message in messages
+    div.message
+      h3= message.title
+      p!= message.content
