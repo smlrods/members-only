@@ -4,4 +4,18 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
+    nav
+      if (user)
+        h2= user.username
+
+        a(href='create-message') Create a new message
+        a(href='join-the-club') Join the club
+
+        form(action='/log-out', method='post')
+          button(type='submit') Log out
+
+      else
+        a(href='log-in') Log in
+        a(href='sign-up') Sign up
+
     block content
